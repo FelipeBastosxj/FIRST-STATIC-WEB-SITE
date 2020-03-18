@@ -1,11 +1,11 @@
-
-
 *{
     margin: 0;
 }
 body{
+    max-width: 100% !important;
+    
     display: grid;
-    grid-template-columns: minmax(160px, 1fr) 3fr 300px;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:'maquiagem maquiagem maquiagem' 
     'navegacao navegacao navegacao' 
     'banner banner banner'
@@ -15,7 +15,6 @@ body{
     'rodape rodape rodape' ;
 }
 header{
-    position: fixed;
     display: flex;
     grid-area: navegacao;
     background-color: black;
@@ -23,6 +22,7 @@ header{
     align-items: center;
     width: 100%;
     justify-content:space-between;
+    position: fixed;
 }
 main{
     grid-template-columns: 1fr;
@@ -176,6 +176,8 @@ main h2{
     line-height: 31px;
     color: grey;
     font-size: 17px;
+    display: none;
+    
 }
 .p1 h4{
     font-size: 23px;
@@ -186,6 +188,7 @@ main h2{
     line-height: 31px;
     color: grey;
     font-size: 17px;
+    display: none;
 }
 .p2 h4{
     font-size: 23px;
@@ -196,6 +199,7 @@ main h2{
     line-height: 31px;
     color:grey;
     font-size: 17px;
+    display: none;
 }
 .p3 h4{
     font-size: 23px;
@@ -306,4 +310,45 @@ main h2{
 .c6:hover {
     background-color: rgba(233, 232, 232, 0.24);
     transition: 0.3s ease-in;
+}
+
+/**/
+
+.cfotos, .cfotos2, .marcacao{
+    opacity: 0;
+}
+.ativo1{
+    opacity: 1;
+}
+.ativo{
+    display: block !important;
+}
+
+.modal{
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.ativo2{
+    display: flex !important;
+    background-color: rgba(0,0,0,.5);;
+    position: fixed;
+    max-width: 100%;
+    width: 1350px;
+    height:100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalinterior{
+    display: flex;
+    height: 300px;
+    width: 300px;
+    border: solid 1px tomato;
+    border-radius: 2px;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
 }
