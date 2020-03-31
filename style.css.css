@@ -68,7 +68,7 @@ footer{
     grid-area: banner;
     padding: 15px 0px 250px 0px;
     width: 100%;
-    background:-webkit-linear-gradient(#1a18184f, #221e1a5e), url(banner2.jpg);
+    background: linear-gradient(#1a18184f, #221e1a5e), url(banner2.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
