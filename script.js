@@ -20,13 +20,15 @@ addEventListener('scroll',mostrar)
 titulo = document.querySelectorAll('h4')
 sumir = document.querySelectorAll('.sumir')
 
- /*function aparecer(){
-     this.nextElementSibling.classList.toggle('ativo')
- }
+ function aparecer(){
+   
+ this.nextElementSibling.classList.toggle('ativo')
+
+}
 
 titulo.forEach(e=>{
     e.addEventListener('click',aparecer)
-})*/
+})
 
 /*function activ(index){
     sumir.forEach(e=>{
@@ -43,9 +45,9 @@ titulo.forEach((item,posicao) =>{
 
 
 
-modal = document.querySelector('.modal')
-botao = document.querySelector('.botao')
-fechar = document.querySelector('.fechar')
+let modal = document.querySelector('.modal')
+let botao = document.querySelector('.botao')
+let fechar = document.querySelector('.fechar')
 
 botao.onclick = (e)=>{
     e.preventDefault()
@@ -55,5 +57,14 @@ botao.onclick = (e)=>{
 fechar.onclick = ()=>{
     modal.classList.remove('ativo2')
 }
+
+
+function ffech(e) {
+    if(e.target === this){
+        modal.classList.remove('ativo2')
+    }
+}
+
+modal.addEventListener('click', ffech)
 
 
